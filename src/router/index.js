@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Chat from '@/components/chat/Chat'
+import Home from '@/components/home/Home'
 import List from '@/components/list/List'
 import Me from '@/components/me/Me'
 
@@ -9,12 +9,12 @@ Vue.use(Router)
 export default new Router({
   routes: [{
       path: '/',
-      name: 'chat',
-      component: Chat
+      name: 'home',
+      component: Home
     },{
-      path: '/chat',
-      name: 'chat',
-      component: Chat
+      path: '/home',
+      name: 'home',
+      component: Home
     },{
       path: '/list',
       name: 'list',

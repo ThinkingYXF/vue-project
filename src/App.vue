@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" :style="{height: changeHeight}">
 		<router-view/>
 
 		<el-footer>
@@ -21,9 +21,10 @@ export default {
 	name: 'app',
 	data(){
 		return {
+			changeHeight: (window.innerHeight - 60) + 'px',
 			nowLocation: 0,
 			tabs: [{
-				path: '/chat',
+				path: '/home',
 				icon: 'el-icon-tickets',
 				content: '主页'
 			},{
@@ -40,6 +41,7 @@ export default {
 	methods: {
 		clickTabs: function(index){
 			this.nowLocation = index;
+			console.log(index);
 		}
 	}
 }
@@ -55,6 +57,7 @@ export default {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		color: #2c3e50;
+		overflow-y: auto;
 	}
 
 	footer{
