@@ -12,6 +12,8 @@ var myInterface = function(){
 		getDemoData: function(){
 			axios.get(config.server + '/data').then((json)=>{
 				console.log(json.data.data);
+			}).catch((err)=>{
+				if(err) throw err;
 			})
 		}
 	}

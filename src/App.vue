@@ -17,12 +17,22 @@
 </template>
 
 <script>
+function tab(){
+	var nowTab = null,
+		list = ['home', 'list', 'me'];
+	for(let i in list){
+		if(location.hash.indexOf(list[i])!==-1){
+			nowTab = i;
+		}
+	}
+	return nowTab;
+}
 export default {
 	name: 'app',
 	data(){
 		return {
 			changeHeight: (window.innerHeight - 60) + 'px',
-			nowLocation: 0,
+			nowLocation: tab() || 0,
 			tabs: [{
 				path: '/home',
 				icon: 'el-icon-tickets',
@@ -41,7 +51,6 @@ export default {
 	methods: {
 		clickTabs: function(index){
 			this.nowLocation = index;
-			console.log(index);
 		}
 	}
 }

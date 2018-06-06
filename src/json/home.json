@@ -3,16 +3,16 @@
 	"data": [{
 		"id": 1000,
 		"rate": null,
-		"src": "/src/assets/school1.jpg",
-		"title": "河大门口",
-		"intro": "本部南院门口",
+		"src": "/src/assets/friends.jpg",
+		"title": "friends",
+		"intro": "true friends",
 		"button": "点赞"
 	},{
 		"id": 1001,
 		"rate": null,
-		"src": "/src/assets/school2.jpg",
-		"title": "河大主楼",
-		"intro": "本部主楼",
+		"src": "/src/assets/friends1.jpg",
+		"title": "friends",
+		"intro": "true friends",
 		"button": "点赞"
 	}]
 }
