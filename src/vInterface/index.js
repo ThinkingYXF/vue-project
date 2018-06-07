@@ -15,6 +15,13 @@ var myInterface = function(){
 			}).catch((err)=>{
 				if(err) throw err;
 			})
+		},
+		getChinaData: function(callback){
+			axios.get('/src/json/china.json').then((json)=>{
+				callback(json);
+			}).catch((err)=>{
+				if(err) throw err;
+			});
 		}
 	}
 }
